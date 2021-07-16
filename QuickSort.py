@@ -1,6 +1,8 @@
 import pandas as pd
 import cProfile
 import psutil
+import sys
+sys.setrecursionlimit(100000)
 
 def memory_usage() :
     p=psutil.Process();
@@ -19,6 +21,7 @@ def quickSort(array) :
           more.append(num)
       else:
           pivot.append(num)
+  return quickSort(less) + pivot + quickSort(more)
 
 
 
