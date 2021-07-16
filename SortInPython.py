@@ -8,7 +8,7 @@ def memory_usage() :
     print(f"memory usage : {rss:10.5f}MB")
 
 def pythonSort(array) :
-    return sorted(array)
+    return array.sort()
 
 
 if __name__ == '__main__':
