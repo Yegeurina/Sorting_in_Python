@@ -9,32 +9,32 @@ def memory_usage() :
 
 def quickSort(array) :
   if len(array) <= 1 :
-    return array
-  p = array[len(array)//2]
-  left, pivot, right =[],[],[]
+      return  array
+  p = array[0]
+  less, more, pivot = [], [], []
   for num in array :
-    if num < p :
-      left.append(num)
-    elif num > p :
-      right.append(num)
-    else :
-      pivot.append(num)
-  return quickSort(left)+pivot+quickSort(right)
+      if num<p :
+          less.append(num)
+      elif num>p :
+          more.append(num)
+      else:
+          pivot.append(num)
+
 
 
 if __name__ == '__main__':
 
     data = pd.Cov = pd.read_csv('./Random.csv')
-    random = list(data['0'])
+    Random = list(data['0'])
     data = pd.Cov = pd.read_csv('./Sorted.csv')
-    sorted = list(data['0'])
+    Sorted = list(data['0'])
     data = pd.Cov = pd.read_csv('./Reversed.csv')
-    reversed = list(data['0'])
+    Reversed = list(data['0'])
 
     memory_usage()
-    cProfile.run('quickSort(random)')
+    cProfile.run('quickSort(Random)')
     memory_usage()
-    cProfile.run('quickSort(sorted)')
+    cProfile.run('quickSort(Sorted)')
     memory_usage()
-    cProfile.run('quickSort(reversed)')
+    cProfile.run('quickSort(Reversed)')
     memory_usage()
